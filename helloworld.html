@@ -2,15 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Hello world</title>
 </head>
 <body>
-<ul>
-  <ul id="list"></ul>
-  <li><a href=""></a></li>
-  <li><a href=""></a></li>
-  <li><a href=""></a></li>
-  <li><a href=""></a></li>
-</ul>
+  Eesnimi:  <input type="text" id="first-name"><br>
+  Perenimi: <input type="text" id="last-name"><br>
+  <input type="submit" value="Tervita" onclick="welcome()" ><br>
+
+  <div id="output"></div>
+
+  <script>
+
+    var first_name;
+    var last_name;
+
+    function welcome(){
+
+      // console.error("töötab");
+
+      first_name = document.getElementById('first-name').value;
+      last_name = document.getElementById('last-name').value;
+
+      console.log(first_name + ' ' + last_name);
+
+      // trükin div'i sisse htmli
+
+      document.getElementById('output').innerHTML = '<b>Tere</b>' + ' ' + first_name + ' ' + last_name;
+
+    }
+
+  </script>
 </body>
 </html>
